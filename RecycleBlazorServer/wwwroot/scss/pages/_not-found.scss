@@ -1,0 +1,37 @@
+﻿.not-found {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 4rem 2rem 2rem 2rem;
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+
+    a {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (min-width: $mobile-breakpoint) {
+    .not-found {
+        padding: 5rem 2rem 2rem 2rem;
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
+
+        a {
+            margin-top: 1rem;
+        }
+    }
+}

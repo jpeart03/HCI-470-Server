@@ -1,0 +1,42 @@
+﻿@page "/contact"
+
+<div class="form-container">
+    <div class="form__heading">
+        <h1>Contact Us</h1>
+        <p>Have a question or comment?</p>
+        <p>We'd love to hear from you.</p>
+    </div>
+    <EditForm Model="@_contact" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <div class="input-group">
+            <label for="name">Name *</label>
+            <InputText class="rc-input" id="name" @bind-Value="_contact.Name" />
+            <ValidationMessage For="@(() => _contact.Name)" />
+        </div>
+        <div class="input-group">
+            <label for="email">Email Address *</label>
+            <InputText class="rc-input" id="email" @bind-Value="_contact.Email" />
+            <ValidationMessage For="@(() => _contact.Email)" />
+        </div>
+        <div class="input-group">
+            <label for="message">Message *</label>
+            <InputTextArea class="rc-input" id="message" @bind-Value="_contact.Message" />
+            <ValidationMessage For="@(() => _contact.Message)" />
+        </div>
+
+        <button type="submit" class="rc-btn">Send Message</button>
+    </EditForm>
+</div>
+
+@code {
+    private ContactModel _contact = new ContactModel();
+
+    private void HandleValidSubmit()
+    {
+        System.Console.WriteLine("Valid submit");
+        _contact.Name = "";
+        _contact.Email = "";
+        _contact.Message = "";
+    }
+
+}

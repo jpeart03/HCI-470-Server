@@ -1,0 +1,18 @@
+.hipster {
+  position: relative;
+  &__header,
+  &__body {
+    color: $color-white;
+  }
+  &__header {
+    padding: 2rem 0;
+    font-family: $typeface-heading;
+  }
+  &__body {
+    padding-top: 1rem;
+    font-family: $typeface-body;
+    &:first-of-type {
+      padding-top: 0;
+    }
+  }
+}

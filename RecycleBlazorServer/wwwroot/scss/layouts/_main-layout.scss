@@ -1,0 +1,30 @@
+body {
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+    &-track {
+      background: $color-black;
+    }
+    &-thumb {
+      background: $color-primary;
+    }
+  }
+}
+
+.main {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: $color-background-dark;
+  padding: 0 0 5rem 0;
+  color: $color-white;
+}
+
+@media only screen and (min-width: $mobile-breakpoint) {
+  .main {
+    padding: 0 0 3rem 5rem;
+  }
+  .content-container {
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+}

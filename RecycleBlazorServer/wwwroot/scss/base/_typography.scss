@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Pathway+Gothic+One&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $typeface-heading;
+}
+
+p,
+ul,
+li,
+input,
+textarea,
+label {
+  font-family: $typeface-body;
+}
