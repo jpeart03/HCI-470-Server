@@ -76,8 +76,8 @@
       overflow: hidden;
 
       .navbar__text {
-        font-size: 2.25rem;
-        letter-spacing: 0.2ch;
+        font-size: 1.3rem;
+        letter-spacing: 0.1ch;
         font-weight: bold;
         color: $color-primary;
         text-transform: uppercase;
@@ -91,6 +91,9 @@
             color: $color-gray-light;
           }
         }
+      }
+      .navbar__brand {
+        display: none;
       }
     }
 
@@ -133,17 +136,21 @@
 
       .navbar {
         &__logo {
+          .navbar__brand {
+            display: inline-block;
+            margin: 0 1rem;
+            min-width: 3.1rem;
+            width: 3.1rem;
+          }
           .navbar__text {
-            margin-left: 2rem;
-            margin-right: 2rem;
-            span:first-child {
-              opacity: 0.4;
-            }
+            margin-left: 1rem;
+            margin-right: 1.5rem;
           }
         }
       }
       .navbar__icon.rotate--180 {
         transform: rotate(-180deg);
+        margin: 0;
       }
 
       .navbar__text {

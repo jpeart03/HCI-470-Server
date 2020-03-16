@@ -1,12 +1,18 @@
 .form-container {
+  position: relative;
   max-width: 23rem;
   margin: 0 auto;
   padding: 4rem 2rem 2rem 2rem;
 
   .form__heading {
+    position: relative;
+    z-index: 8;
     h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
+      span {
+        color: $color-primary;
+      }
     }
     p {
       font-size: 1.1rem;
@@ -14,6 +20,10 @@
         margin-bottom: 1.1rem;
       }
     }
+  }
+  form {
+    position: relative;
+    z-index: 8;
   }
 
   .input-group {
@@ -23,7 +33,7 @@
     label {
       font-size: 1.1rem;
       display: block;
-      margin-bottom: .25rem;
+      margin-bottom: 0.25rem;
     }
     input,
     textarea {
@@ -46,6 +56,15 @@
   }
   .rc-btn {
     margin-top: 1.1rem;
+  }
+  .form__brand {
+    position: absolute;
+    width: 100%;
+    top: 2rem;
+    left: 50%;
+    margin-left: -11.5rem;
+    z-index: 6;
+    opacity: 0.4;
   }
 }
 
@@ -70,6 +89,9 @@
         font-size: 1.25rem;
         line-height: 1.5rem;
       }
+    }
+    .form__brand {
+      margin-left: -15rem;
     }
   }
 }
